@@ -1,0 +1,35 @@
+//John Power
+/*This is a program that checks if a 9 letter word is a palindrome
+ */
+import java.util.Scanner;
+public class palindrome 
+{
+
+    public static void main(String args[]) 
+    {
+    	Scanner input = new Scanner (System.in);
+    	String word;
+    	
+    	
+    	
+    	System.out.print("enter a word 9 letters long: ");
+    	word=input.nextLine();
+    	
+    	if (word.length()==9)
+    	{
+    		if (word.charAt(0)==word.charAt(8)&&word.charAt(1)==word.charAt(7)&&word.charAt(2)==word.charAt(6)&&word.charAt(3)==word.charAt(5))
+    		{
+    			System.out.println("This is a palindrome. :) "); 
+    		}
+    		else 
+    		{
+    			System.out.println("This is not a palindrome");
+    		}
+    	}
+    	
+    	else
+    		System.out.println("you did not enter a 9 letter word");
+    }
+    
+    
+}
