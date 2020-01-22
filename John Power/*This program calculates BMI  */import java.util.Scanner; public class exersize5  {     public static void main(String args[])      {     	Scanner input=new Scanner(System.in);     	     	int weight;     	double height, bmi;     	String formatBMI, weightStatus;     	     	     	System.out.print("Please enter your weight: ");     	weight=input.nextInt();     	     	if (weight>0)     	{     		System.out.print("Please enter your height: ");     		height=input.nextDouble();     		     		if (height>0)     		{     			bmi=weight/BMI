@@ -1,0 +1,68 @@
+//John Power
+/*This program calculates BMI
+ */
+
+import java.util.Scanner;
+
+public class exersize5 
+{
+
+    public static void main(String args[]) 
+    {
+    	Scanner input=new Scanner(System.in);
+    	
+    	int weight;
+    	double height, bmi;
+    	String formatBMI, weightStatus;
+    	
+    	
+    	System.out.print("Please enter your weight: ");
+    	weight=input.nextInt();
+    	
+    	if (weight>0)
+    	{
+    		System.out.print("Please enter your height: ");
+    		height=input.nextDouble();
+    		
+    		if (height>0)
+    		{
+    			bmi=weight/(height*height);
+    			formatBMI=String.format("%.5f",bmi); 
+    			
+    			if (bmi<=18.5)
+    			{
+    				weightStatus="Underweight";
+    			}
+    			else if (bmi>=18.5&&bmi<=24.99)
+    			{
+    				weightStatus="Normal";
+    			}
+    			
+    			else if (bmi>=25&&bmi<=29.99)
+    			{
+    				weightStatus="Overweight";
+    			}
+    			else
+    			{
+    				weightStatus="Obese";
+    			}
+    			
+    			System.out.println("Your BMI is " + formatBMI + " therfore you are " + weightStatus);
+    			
+    		}
+    		
+    		else
+    		{
+    			System.out.println("invalid weight! Exiting program.");
+    		}
+    	}
+    	
+    	else
+    	{
+    		System.out.println("invalid weight! Exiting program.");
+    	}
+    	
+    }
+    
+    
+}
